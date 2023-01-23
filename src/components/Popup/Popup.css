@@ -1,0 +1,31 @@
+.popup {
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+    box-shadow: 0 0 20px grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.popup_active {
+    visibility: visible;
+}
+
+.popup_closed {
+    visibility: hidden;
+}
+
+.popup__close-btn {
+    background-color: red;
+    width: 50px;
+    height: 20px;
+    border-radius: 0 10px;
+    border: 0;
+}
