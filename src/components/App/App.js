@@ -5,7 +5,8 @@ import { useState } from 'react';
 import Toolbar from '../Toolbar/Toolbar';
 
 function App() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [books, setBooks] = useState([]);
   console.log(isOpen)
 
   return (
