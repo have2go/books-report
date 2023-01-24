@@ -8,7 +8,7 @@ function Toolbar({isOpen, setIsOpen}) {
 
     return(
         <section className='toolbar'>
-            <button className='toolbar__add-btn' onClick={handleAdd}></button>
+            <button className='toolbar__add-btn' onClick={handleAdd}>Добавить издание</button>
         </section>
     )
 }

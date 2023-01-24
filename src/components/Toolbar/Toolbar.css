@@ -1,10 +1,15 @@
 .toolbar {
     width: 100%;
     height: 100px;
+    position: sticky;
+    background-color: aliceblue;
+    top: 0;
 }
 
 .toolbar__add-btn {
-    width: 100px;
+    width: 170px;
     height: 50px;
-    background-color: green;
+    margin: 20px 0 0 20px;
+    background-color: lightgreen;
+    border-radius: 10px;
 }
