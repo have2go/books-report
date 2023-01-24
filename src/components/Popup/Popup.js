@@ -1,7 +1,7 @@
 import "./Popup.css";
 // import handleReadingFile from "../../../files";
 
-function Popup({ isOpen, setIsOpen }) {
+function Popup({ isOpen, setIsOpen, books, setBooks, handleNewBook }) {
     function handleClose(e) {
         e.preventDefault();
         setIsOpen(false);
@@ -9,6 +9,22 @@ function Popup({ isOpen, setIsOpen }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        const newBook = {
+            id: 4,
+            date: "00.00.2023",
+            department: "Е1",
+            title: "Книга",
+            vi: "У",
+            sp: "Т",
+            editor: "З",
+            layout: "СВ",
+            pages: "45",
+            volume: "5500",
+            printing: "100",
+            year: "2005",
+        };
+        handleNewBook(newBook);
+        setIsOpen(false);
     }
 
     return (
@@ -111,7 +127,10 @@ function Popup({ isOpen, setIsOpen }) {
                     </label>
                     <button
                         className="popup__submit-btn"
-                        type="submit" onClick={handleSubmit}>Добавить</button>
+                        type="submit"
+                        onClick={handleSubmit}>
+                        Добавить
+                    </button>
                 </form>
             </div>
         </div>
