@@ -4,6 +4,7 @@ import "./Form.css";
 function Form({ books, setIsOpen, handleNewBook }) {
     const [date, setDate] = useState("");
     const [dep, setDep] = useState("");
+    const [author, setAuthor] = useState("");
     const [title, setTitle] = useState("");
     const [vi, setVi] = useState("");
     const [sp, setSp] = useState("");
@@ -13,6 +14,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
     const [volume, setVolume] = useState(0);
     const [printing, setPrinting] = useState(0);
     const [year, setYear] = useState(0);
+    console.log(author)
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -20,6 +22,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
         const newBook = {
             id: bookId,
             date: date.split("-").reverse().join("."),
+            author: author,
             department: dep,
             title: title,
             vi: vi,
@@ -49,7 +52,6 @@ function Form({ books, setIsOpen, handleNewBook }) {
                     max="2030-12-31"
                 />
             </label>
-
             <label className="form__input-label">
                 Кафедра
                 <input
@@ -59,6 +61,16 @@ function Form({ books, setIsOpen, handleNewBook }) {
                     maxLength={2}
                     value={dep}
                     onChange={(e) => setDep(e.target.value)}
+                />
+            </label>
+            <label className="form__input-label">
+                Автор
+                <input
+                    className="form__input-author"
+                    name="author"
+                    type="text"
+                    value={author}
+                    onChange={(e) => setAuthor(e.target.value)}
                 />
             </label>
             <label className="form__input-label">

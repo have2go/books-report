@@ -4,16 +4,24 @@ import { textFilter } from 'react-bootstrap-table2-filter';
     {
         dataField: "id",
         text: "№",
+        headerStyle: { width: '3%' },
     },
     {
         dataField: "date",
         text: "Дата постановки",
-        filter: textFilter()
+        filter: textFilter(),
+        headerStyle: { width: '7%', }
+    },
+    {
+        dataField: "author",
+        text: "Автор",
+        filter: textFilter(),
     },
     {
         dataField: "department",
-        text: "Кафедра",
-        filter: textFilter()
+        text: "Каф.",
+        filter: textFilter(),
+        headerStyle: { width: '4%' }
     },
     {
         dataField: "title",
@@ -55,6 +63,7 @@ import { textFilter } from 'react-bootstrap-table2-filter';
     {
         dataField: "year",
         text: "Год",
+        filter: textFilter()
     },
 ];
 
