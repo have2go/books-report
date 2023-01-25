@@ -418,5 +418,19 @@
     "volume": 0,
     "printing": 0,
     "year": 0
+  },
+  {
+    "id": 31,
+    "date": "09.12.2022",
+    "department": "Е5",
+    "title": "Тест",
+    "vi": "ВИ",
+    "sp": "СП",
+    "editor": "Иванов",
+    "layout": "Сидоров",
+    "pages": "5000",
+    "volume": "20000",
+    "printing": "100000",
+    "year": "2015"
   }
 ]
