@@ -7,6 +7,8 @@ import Toolbar from "../Toolbar/Toolbar";
 function App() {
     const [isOpen, setIsOpen] = useState(false);
     const [books, setBooks] = useState([]);
+    const [selectedRow, setSelectedRow] = useState('');
+    const [popupType, setPopupType] = useState('');
 
     useEffect(() => {
         const fs = window.require("fs");
@@ -31,15 +33,32 @@ function App() {
         });
     }
 
+    function handleDeleteBook(bookToDelete) {
+        
+        let booksArray = books;
+        booksArray = booksArray.filter(b => b.id !== bookToDelete.id);
+        // console.log(booksArray);
+        // console.log(books)
+        setBooks(booksArray)  
+        
+        // booksArray.forEach((b, i) => {
+        //     console.log(i)
+        // })
+        // console.log(books);
+    }
+
     return (
         <div className="App">
-            <Toolbar isOpen={isOpen} setIsOpen={setIsOpen} />
-            <Table books={books} />
+            <Toolbar isOpen={isOpen} setIsOpen={setIsOpen} setPopupType={setPopupType} selectedRow={selectedRow} />
+            <Table books={books} selectedRow={selectedRow} setSelectedRow={setSelectedRow} />
             <Popup
                 books={books}
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 handleNewBook={handleNewBook}
+                type={popupType}
+                selectedRow={selectedRow}
+                handleDelete={handleDeleteBook}
             />
         </div>
     );

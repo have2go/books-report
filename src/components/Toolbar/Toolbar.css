@@ -6,10 +6,17 @@
     top: 0;
 }
 
-.toolbar__add-btn {
+.toolbar__btn {
     width: 170px;
     height: 50px;
     margin: 20px 0 0 20px;
-    background-color: lightgreen;
     border-radius: 10px;
+}
+
+.toolbar__add-btn {
+    background-color: lightgreen;
+}
+
+.toolbar__delete-btn {
+    background-color: lightcoral;
 }

@@ -2,11 +2,6 @@ import { textFilter } from 'react-bootstrap-table2-filter';
  
  export const columns = [
     {
-        dataField: "id",
-        text: "№",
-        headerStyle: { width: '3%' },
-    },
-    {
         dataField: "date",
         text: "Дата постановки",
         filter: textFilter(),
