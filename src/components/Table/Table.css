@@ -10,3 +10,15 @@
     border: none;
     border-radius: 5px;
 }
+
+.table__container {
+    overflow-y: scroll;
+    height: 88vh;
+}
+
+.table__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 0 5px grey;
+}

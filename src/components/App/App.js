@@ -22,9 +22,6 @@ function App() {
         const booksArr = books;
         booksArr.push(newBook);
         setBooks(booksArr);
-        console.log(books);
-      // вряд ли каждый раз перезаписывать файл это оптимальное решение
-      // особенно если учитывать, что книг будет много
         const fs = window.require("fs");
         const booksToJson = JSON.stringify(booksArr, null, 2);
         fs.writeFile("src/data/books.json", booksToJson, (err) => {
@@ -34,23 +31,30 @@ function App() {
     }
 
     function handleDeleteBook(bookToDelete) {
-        
-        let booksArray = books;
-        booksArray = booksArray.filter(b => b.id !== bookToDelete.id);
-        // console.log(booksArray);
-        // console.log(books)
-        setBooks(booksArray)  
-        
-        // booksArray.forEach((b, i) => {
-        //     console.log(i)
-        // })
-        // console.log(books);
+        let booksArr = books;
+        booksArr = booksArr.filter(b => b.id !== bookToDelete.id);
+        setBooks(booksArr);
+        const fs = window.require("fs");
+        const booksToJson = JSON.stringify(booksArr, null, 2);
+        fs.writeFile("src/data/books.json", booksToJson, (err) => {
+            if (err) throw err;
+            console.log("Data has been removed!");
+        });
+        console.log(booksArr);
+    }
+
+    function handleEditCell() {
+        const fs = window.require("fs");
+        fs.writeFile("src/data/books.json", JSON.stringify(books, null, 2), (err) => {
+            if (err) throw err;
+            console.log("Data has been changed!");
+        });
     }
 
     return (
         <div className="App">
             <Toolbar isOpen={isOpen} setIsOpen={setIsOpen} setPopupType={setPopupType} selectedRow={selectedRow} />
-            <Table books={books} selectedRow={selectedRow} setSelectedRow={setSelectedRow} />
+            <Table books={books} selectedRow={selectedRow} setSelectedRow={setSelectedRow} handleEditCell={handleEditCell} />
             <Popup
                 books={books}
                 isOpen={isOpen}
@@ -59,6 +63,7 @@ function App() {
                 type={popupType}
                 selectedRow={selectedRow}
                 handleDelete={handleDeleteBook}
+                
             />
         </div>
     );

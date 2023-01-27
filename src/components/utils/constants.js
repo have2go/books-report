@@ -3,20 +3,20 @@ import { textFilter } from 'react-bootstrap-table2-filter';
  export const columns = [
     {
         dataField: "date",
-        text: "Дата постановки",
+        text: "Дата пост.",
         filter: textFilter(),
         headerStyle: { width: '7%', }
-    },
-    {
-        dataField: "author",
-        text: "Автор",
-        filter: textFilter(),
     },
     {
         dataField: "department",
         text: "Каф.",
         filter: textFilter(),
         headerStyle: { width: '4%' }
+    },
+    {
+        dataField: "author",
+        text: "Автор",
+        filter: textFilter(),
     },
     {
         dataField: "title",
@@ -26,39 +26,47 @@ import { textFilter } from 'react-bootstrap-table2-filter';
     {
         dataField: "vi",
         text: "ВИ",
-        filter: textFilter()
+        filter: textFilter(),
+        headerStyle: { width: '4%' }
     },
     {
         dataField: "sp",
         text: "СП",
-        filter: textFilter()
+        filter: textFilter(),
+        headerStyle: { width: '4%' }
     },
     {
         dataField: "editor",
-        text: "Редактор",
-        filter: textFilter()
+        text: "Ред.",
+        filter: textFilter(),
+        headerStyle: { width: '5%' }
     },
     {
         dataField: "layout",
-        text: "Верстальщик",
-        filter: textFilter()
+        text: "Верст.",
+        filter: textFilter(),
+        headerStyle: { width: '5%' }
     },
     {
         dataField: "pages",
-        text: "Страниц",
+        text: "Стр.",
+        headerStyle: { width: '5%' }
     },
     {
         dataField: "volume",
         text: "Объем",
+        headerStyle: { width: '5%' }
     },
     {
         dataField: "printing",
         text: "Тираж",
+        headerStyle: { width: '5%' }
     },
     {
         dataField: "year",
         text: "Год",
-        filter: textFilter()
+        filter: textFilter(),
+        headerStyle: { width: '5%' }
     },
 ];
 
