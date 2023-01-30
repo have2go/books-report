@@ -13,6 +13,7 @@ function App() {
     useEffect(() => {
         const fs = window.require("fs");
         const rawBooks = fs.readFileSync("src/data/books.json");
+        // const rawBooks = fs.readFileSync("/Users/Alexey/Desktop/books.json");
         const preparedBooks = JSON.parse(rawBooks);
         setBooks(preparedBooks);
         console.log("useEffect triggered");
@@ -62,8 +63,8 @@ function App() {
                 handleNewBook={handleNewBook}
                 type={popupType}
                 selectedRow={selectedRow}
+                setSelectedRow={setSelectedRow}
                 handleDelete={handleDeleteBook}
-                
             />
         </div>
     );

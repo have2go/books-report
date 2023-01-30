@@ -1,4 +1,14 @@
 import { textFilter } from 'react-bootstrap-table2-filter';
+
+function priceFormatter(column, colIndex, { sortElement, filterElement }) {
+    return (
+      <div style={ { display: 'flex', flexDirection: 'column' } }>
+        { column.text }
+        { filterElement }
+        { sortElement }
+      </div>
+    );
+  }
  
  export const columns = [
     {
@@ -17,11 +27,14 @@ import { textFilter } from 'react-bootstrap-table2-filter';
         dataField: "author",
         text: "Автор",
         filter: textFilter(),
+        headerFormatter: priceFormatter
     },
     {
         dataField: "title",
         text: "Название",
-        filter: textFilter()
+        filter: textFilter(),
+        headerFormatter: priceFormatter
+        
     },
     {
         dataField: "vi",

@@ -20,6 +20,8 @@ const createWindow = () => {
     );
     if (isDev) {
         win.webContents.openDevTools();
+    } else {
+        win.webContents.openDevTools();
     }
 };
 

@@ -44,7 +44,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Дата постановки
                     <input
-                        className="form__input-date"
+                        className="form__input form__input-date"
                         name="date"
                         type="date"
                         value={date}
@@ -56,7 +56,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Кафедра
                     <input
-                        className="form__input-dep"
+                        className="form__input form__input-dep"
                         name="dep"
                         type="text"
                         maxLength={2}
@@ -67,7 +67,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Автор
                     <input
-                        className="form__input-author"
+                        className="form__input form__input-author"
                         name="author"
                         type="text"
                         value={author}
@@ -77,7 +77,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Название
                     <input
-                        className="form__input-title"
+                        className="form__input form__input-title"
                         name="title"
                         type="text"
                         value={title}
@@ -87,7 +87,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     ВИ
                     <input
-                        className="form__input-vi"
+                        className="form__input form__input-vi"
                         name="vi"
                         type="text"
                         value={vi}
@@ -97,7 +97,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     СП
                     <input
-                        className="form__input-sp"
+                        className="form__input form__input-sp"
                         name="sp"
                         type="text"
                         value={sp}
@@ -107,7 +107,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Редактор
                     <input
-                        className="form__input-editor"
+                        className="form__input form__input-editor"
                         name="editor"
                         type="text"
                         value={editor}
@@ -117,7 +117,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Верстальщик
                     <input
-                        className="form__input-layout"
+                        className="form__input form__input-layout"
                         name="layout"
                         type="text"
                         value={layout}
@@ -127,7 +127,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Страниц
                     <input
-                        className="form__input-pages"
+                        className="form__input form__input-pages"
                         name="pages"
                         type="number"
                         value={pages || ""}
@@ -137,7 +137,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Объём
                     <input
-                        className="form__input-volume"
+                        className="form__input form__input-volume"
                         name="volume"
                         type="number"
                         value={volume || ""}
@@ -147,7 +147,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Тираж
                     <input
-                        className="form__input-printing"
+                        className="form__input form__input-printing"
                         name="printing"
                         type="number"
                         value={printing || ""}
@@ -157,7 +157,7 @@ function Form({ books, setIsOpen, handleNewBook }) {
                 <label className="form__input-label">
                     Год
                     <input
-                        className="form__input-year"
+                        className="form__input form__input-year"
                         name="year"
                         type="number"
                         max={4}

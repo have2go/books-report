@@ -1,7 +1,7 @@
 .popup {
-    width: 60%;
-    height: 75%;
-    background-color: lightgray;
+    width: 40%;
+    height: 70%;
+    background-color: white;
     box-shadow: 0 0 20px grey;
     border-radius: 10px;
     display: flex;
@@ -11,14 +11,18 @@
     top: 0;
     bottom: 0;
     margin: auto;
+    z-index: 100;
+    transition: opacity .2s ease-out;
 }
 
 .popup_active {
     visibility: visible;
+    opacity: 1;
 }
 
 .popup_closed {
     visibility: hidden;
+    opacity: 0;
 }
 
 .popup__close-btn {
@@ -32,8 +36,43 @@
     right: 0;
 }
 
-.popup__content {
+.popup__close-btn:hover {
+    opacity: .7;
+}
+
+.popup__form {
     margin: auto;
     width: 80%;
-    height: 80%;
+}
+
+.popup__overlay {
+    z-index: 50;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    padding: 0;
+    border: none;
+    transition: all .2s ease-out;
+}
+
+.popup__overlay_active {
+    visibility: visible;
+    opacity: .4;
+}
+
+.popup__overlay_closed {
+    visibility: hidden;
+}
+
+.popup__delete {
+    margin: auto;
+    width: 80%;
+}
+
+.popup:has(.popup__delete) {
+    height: 30%;
 }
